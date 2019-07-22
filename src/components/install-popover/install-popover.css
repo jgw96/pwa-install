@@ -1,0 +1,67 @@
+#popoverContainer {
+  padding: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  font-family: sans-serif;
+}
+
+#headerContainer {
+  display: flex;
+  align-items: center;
+}
+
+#headerContainer img {
+  height: 6em;
+  margin-right: 1em;
+  background: lightgrey;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+#headerContainer h1 {
+  font-size: 22px;
+}
+
+#buttonsContainer {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  bottom: 8px;
+  width: 97%;
+}
+
+#screenshots img {
+  height: 12em;
+  margin-right: 12px;
+}
+
+#installButton {
+  background: #2b5797;
+  color: white;
+  border: none;
+  font-size: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  border-radius: 5px;
+  margin-right: 10px;
+  text-transform: uppercase;
+  outline: none;
+}
+
+#cancelButton {
+  background: #ee1111;
+  color: white;
+  border: none;
+  font-size: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  border-radius: 5px;
+  margin-right: 10px;
+  text-transform: uppercase;
+  outline: none;
+}
