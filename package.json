@@ -1,6 +1,6 @@
 {
   "name": "pwa-install",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Web Component that provides an install experience for PWAs",
   "main": "dist/index.js",
   "module": "dist/index.mjs",

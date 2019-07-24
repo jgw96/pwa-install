@@ -15,6 +15,7 @@ export namespace Components {
     'path': string;
   }
   interface PwaInstall {
+    'forceshow': boolean;
     'iconpath': string;
     'manifestpath': string;
   }
@@ -47,6 +48,7 @@ declare namespace LocalJSX {
     'path'?: string;
   }
   interface PwaInstall extends JSXBase.HTMLAttributes<HTMLPwaInstallElement> {
+    'forceshow'?: boolean;
     'iconpath'?: string;
     'manifestpath'?: string;
   }

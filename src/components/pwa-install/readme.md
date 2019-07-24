@@ -7,10 +7,11 @@
 
 ## Properties
 
-| Property       | Attribute      | Description | Type     | Default     |
-| -------------- | -------------- | ----------- | -------- | ----------- |
-| `iconpath`     | `iconpath`     |             | `string` | `undefined` |
-| `manifestpath` | `manifestpath` |             | `string` | `undefined` |
+| Property       | Attribute      | Description | Type      | Default     |
+| -------------- | -------------- | ----------- | --------- | ----------- |
+| `forceshow`    | `forceshow`    |             | `boolean` | `undefined` |
+| `iconpath`     | `iconpath`     |             | `string`  | `undefined` |
+| `manifestpath` | `manifestpath` |             | `string`  | `undefined` |
 
 
 ## Dependencies

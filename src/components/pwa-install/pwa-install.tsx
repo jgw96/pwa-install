@@ -14,18 +14,33 @@ export class PWAInstall {
 
   @Prop() manifestpath: string;
   @Prop() iconpath: string;
+  @Prop() forceshow: boolean;
   @Prop({ connect: 'ion-modal-controller' }) modalCtrl: HTMLIonModalControllerElement | null = null;
 
   componentDidLoad() {
-    window.addEventListener('beforeinstallprompt', (e) => {
-      console.log('e', e);
-      // Prevent Chrome 67 and earlier from automatically showing the prompt
-      e.preventDefault();
-      // Stash the event so it can be triggered later.
-      this.deferredPrompt = e;
-
+    console.log(this.forceshow);
+    if (this.forceshow === true) {
       this.showInstall = true;
-    });
+
+      window.addEventListener('beforeinstallprompt', (e) => {
+        console.log('e', e);
+        // Prevent Chrome 67 and earlier from automatically showing the prompt
+        e.preventDefault();
+        // Stash the event so it can be triggered later.
+        this.deferredPrompt = e;
+      });
+    }
+    else {
+      window.addEventListener('beforeinstallprompt', (e) => {
+        console.log('e', e);
+        // Prevent Chrome 67 and earlier from automatically showing the prompt
+        e.preventDefault();
+        // Stash the event so it can be triggered later.
+        this.deferredPrompt = e;
+  
+        this.showInstall = true;
+      });
+    }
   }
 
   async install() {

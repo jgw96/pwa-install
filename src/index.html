@@ -15,22 +15,8 @@
 
 <body>
 
-  <pwa-install iconPath="https://webboard-app.web.app/assets/icon/256.png"
-    manifestPath="/assets/test-manifest.webmanifest"></pwa-install>
-
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function () {
-        navigator.serviceWorker.register('/sw.js').then(function (registration) {
-          // Registration was successful
-          console.log('ServiceWorker registration successful with scope: ', registration.scope);
-        }, function (err) {
-          // registration failed :(
-          console.log('ServiceWorker registration failed: ', err);
-        });
-      });
-    }
-  </script>
+  <pwa-install iconpath="https://webboard-app.web.app/assets/icon/256.png"
+    manifestpath="/assets/test-manifest.webmanifest" forceshow="true"></pwa-install>
 
 </body>
 
