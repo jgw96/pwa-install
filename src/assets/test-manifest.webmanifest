@@ -28,6 +28,7 @@
       "type": "image/png"
     }
   ],
+  "categories": ["tools", "productivity"],
   "background_color": "#1976d2",
   "theme_color": "#1976d2"
 }

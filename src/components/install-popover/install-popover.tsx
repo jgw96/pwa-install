@@ -9,6 +9,7 @@ interface IManifest {
   icons: any[],
   background_color: string,
   screenshots: any[],
+  categories: string[],
   theme_color: string
 }
 
@@ -80,6 +81,15 @@ export class InstallPopover {
 
           <div>
             <h1>{this.manifestData.name}</h1>
+
+            {this.manifestData.categories ? <div id="tagsDiv">
+              {this.manifestData.categories.map((tag) => {
+                return (
+                  <span>{tag}</span>
+                )
+              })}
+            </div> : null}
+
             <p>
               {this.manifestData.description}
             </p>
@@ -87,17 +97,18 @@ export class InstallPopover {
         </div>
 
         <div id="contentContainer">
-          <h3>Screenshots</h3>
-
-          <div id="screenshots">
-            {
-              this.manifestData.screenshots.map((screen) => {
-                return (
-                  <img src={screen.src}></img>
-                )
-              })
-            }
-          </div>
+          {this.manifestData.screenshots ?
+            <div><h3>Screenshots</h3>
+              <div id="screenshots">
+                {
+                  this.manifestData.screenshots.map((screen) => {
+                    return (
+                      <img src={screen.src}></img>
+                    )
+                  })
+                }
+              </div>
+            </div> : null}
         </div>
 
         <div id="buttonsContainer">

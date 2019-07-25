@@ -2,15 +2,34 @@
 
 # pwa-install
 
-`pwa-install` is a web component that brings an awesome "install" experience to your Progressive Web App!
+`pwa-install` is a [web component](https://meowni.ca/posts/web-components-with-otters/) built with [Stencil](https://stenciljs.com) that brings an awesome "install" experience to your Progressive Web App! It is still early for this component, but expect lots of improvements soon!
 
+
+### What does it look like? 
+![An image of what the component looks like](pwa-install.png?raw=true "pwa-install")
 
 ## Using this component
 
+### Things to know:
+- pwa-install uses the `beforeinstallprompt` event described [in these docs](https://developers.google.com/web/fundamentals/app-install-banners/) to know when the browser has said your PWA is installable. It will not show the install button until this event has fired. This can be worked around by using the `forceshow` prop described below.
+- pwa-install currently takes advantage of these parts of the [w3c manifest spec](https://www.w3.org/TR/appmanifest/): name, categories, description, screenshots
+
+## Install
 ### Script tag
 
-- Put these two script tags in the head of your index.html: ```<script type="module" src="https://unpkg.com/pwa-install/dist/pwa-install/pwa-install.esm.js"></script>
-<script nomodule="" src="https://unpkg.com/pwa-install/dist/pwa-install/pwa-install.js"></script>```
-- Then you can use the element anywhere in your template, JSX, html etc
-An example of using this component can be found here: https://glitch.com/~pwa-install-example
+- Put these two script tags in the head of your index.html: 
+```html
+  <script type="module" src="https://unpkg.com/pwa-install/dist/pwa-install/pwa-install.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/pwa-install/dist/pwa-install/pwa-install.js"></script>
+```
+- Then you can use the element `<pwa-install></pwa-install>` anywhere in your template, JSX, html etc. An example of using this component can be found here: https://glitch.com/~pwa-install-example
 
+
+## API
+### Properties
+
+| Property       | Attribute      | Description | Type      | Default     |
+| -------------- | -------------- | ----------- | --------- | ----------- |
+| `forceshow`    | `forceshow`    | Will always show install button            | `boolean` | `undefined` |
+| `iconpath`     | `iconpath`     |  path to app icon           | `string`  | `undefined` |
+| `manifestpath` | `manifestpath` |  path to your web manifest        | `string`  | `undefined` |
