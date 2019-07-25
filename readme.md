@@ -2,6 +2,8 @@
 
 # pwa-install
 
+Current version: v0.0.4 alpha
+
 `pwa-install` is a [web component](https://meowni.ca/posts/web-components-with-otters/) built with [Stencil](https://stenciljs.com) that brings an awesome "install" experience to your Progressive Web App! It is still early for this component, but expect lots of improvements soon!
 
 
